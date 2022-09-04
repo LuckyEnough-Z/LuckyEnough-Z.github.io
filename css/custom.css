@@ -1,0 +1,312 @@
+/* 更换博客字体样式 */
+@font-face {
+    font-family: 'hytmr55';
+    /* 字体名自定义即可 */
+    src: url('../fonts/hytmr55.woff');
+    /* 字体文件路径 */
+    font-display: swap;
+}
+
+body,
+.gitcalendar {
+    font-family: hytmr55 !important;
+}
+
+/* 主页顶部高度 */
+#page-header.full_page {
+    height: 400px;
+}
+
+/* 鼠标样式 */
+body {
+    cursor: url(../img/mouse/default.cur),
+    default;
+}
+
+a, i, img, span {
+    cursor: url(../img/mouse/pointer.cur),
+    default;
+}
+
+/* span 小标签*/
+span.inline-tag {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .1rem;
+    border-radius: 6px;
+    background-color: var(--Color)
+}
+
+p.red, span.red {
+    --Color: rgb(233, 30, 100);
+    --ColorA: rgba(233, 30, 100, 0.2);
+}
+
+p.green, span.green {
+    --Color: rgb(139, 195, 74);
+    --ColorA: rgba(139, 195, 74, 0.2);
+}
+
+p.blue, span.blue {
+    --Color: rgb(3, 169, 244);
+    --ColorA: rgba(3, 169, 244, 0.2);
+}
+
+p.yellow, span.yellow {
+    --Color: rgb(255, 193, 7);
+    --ColorA: rgba(255, 193, 7, 0.2);
+}
+
+p.grey, span.grey {
+    --Color: rgb(76, 76, 76);
+    --ColorA: rgba(76, 76, 76, 0.2);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #e58a8a;
+}
+
+/* Twikoo 评论框高度 */
+#twikoo .el-textarea__inner {
+    min-height: 180px !important;
+}
+
+#twikoo .el-textarea__inner:focus {
+    background-image: none !important;
+}
+
+#twikoo .tk-comment {
+    padding: 15px;
+    border-radius: 8px;
+    background: #F8F8F9;
+}
+
+/* 顶部加载进度条 */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: #49B1F5;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.4) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.4) 75%,
+            transparent 75%,
+            transparent
+    );
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #49b1f5;
+}
+/* 页脚footer */
+/* 渐变色滚动动画 */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+#footer {
+    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#footer:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表白色透明度为0.3 */
+    background: rgba(255,255,255,.3);
+}
+
+/* 所有背景（包括首页卡片、文章页、页面页等） */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+    /* 以下代表白色透明度为0.3 */
+    background: rgba(255,255,255,.3);
+}
+#web_bg {
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+/*诗*/
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: none;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.poem-wrap h1 {
+    font-size: 30px;
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979
+}
+
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+}
+
+.poem-wrap p#poem {
+    font-size: 25px;
+}
+
+.poem-wrap p#info {
+    font-size: 15px;
+    margin: 15px auto;
+}
+
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+
+.poem-right {
+    right: 0;
+}
+
+.poem-left {
+    left: 0;
+}
+
+@media (max-width: 685px) {
+    .poem-border {
+        width: 18%;
+    }
+}
+
+@media (max-width: 500px) {
+    .poem-wrap {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        border-top: 2px solid #797979;
+    }
+
+    .poem-wrap h1 {
+        margin: 20px 6px;
+    }
+
+    .poem-border {
+        display: none;
+    }
+}
+
