@@ -1,33 +1,125 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>常见代码案例 | Looking4U</title><meta name="author" content="张嘉译"><meta name="copyright" content="张嘉译"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="#外挂标签案例 1. 带 &amp;#123;% u 下划线 %&amp;#125; 的文本2. 带 &amp;#123;% emp 着重号 %&amp;#125; 的文本3. 带 &amp;#123;% wavy 波浪线 %&amp;#125; 的文本4. 带 &amp;#123;% del 删除线 %&amp;#125; 的文本5. 键盘样式的文本 &amp;#123;% kbd command %&amp;#125; + &amp;#123;% kbd D %&amp;#125;6.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="常见代码案例">
-<meta property="og:url" content="https://luckyenough-z.github.io/p/4092cb80.html">
-<meta property="og:site_name" content="Looking4U">
-<meta property="og:description" content="#外挂标签案例 1. 带 &amp;#123;% u 下划线 %&amp;#125; 的文本2. 带 &amp;#123;% emp 着重号 %&amp;#125; 的文本3. 带 &amp;#123;% wavy 波浪线 %&amp;#125; 的文本4. 带 &amp;#123;% del 删除线 %&amp;#125; 的文本5. 键盘样式的文本 &amp;#123;% kbd command %&amp;#125; + &amp;#123;% kbd D %&amp;#125;6.">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://luckyenough-z.github.io/picture/one-3672.jpg">
-<meta property="article:published_time" content="2022-09-04T04:59:48.000Z">
-<meta property="article:modified_time" content="2022-09-05T05:51:17.934Z">
-<meta property="article:author" content="张嘉译">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://luckyenough-z.github.io/picture/one-3672.jpg"><link rel="shortcut icon" href="/img/head.png"><link rel="canonical" href="https://luckyenough-z.github.io/p/4092cb80"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>常见代码案例 | Looking4U</title><meta name="author" content="张嘉译"><meta name="copyright" content="张嘉译"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="#外挂标签案例 1. 带 &amp;#123;% u 下划线 %&amp;#125; 的文本2. 带 &amp;#123;% emp 着重号 %&amp;#125; 的文本3. 带 &amp;#123;% wavy 波浪线 %&amp;#125; 的文本4. 带 &amp;#123;% del 删除线 %&amp;#125; 的文本5. 键盘样式的文本..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "常见代码案例",
+  "url": "https://luckyenough-z.github.io/p/4092cb80.html",
+  "image": "https://luckyenough-z.github.io/picture/one-3672.jpg",
+  "datePublished": "2022-09-04T04:59:48.000Z",
+  "dateModified": "2022-09-05T05:51:17.934Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "张嘉译",
+      "url": "https://luckyenough-z.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/head.png"><link rel="canonical" href="https://luckyenough-z.github.io/p/4092cb80.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: undefined,
   translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -35,127 +127,40 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '常见代码案例',
-  isPost: true,
-  isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-09-05 13:51:17'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Looking4U" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/picture/one-3672.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Looking4U</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">常见代码案例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-04T04:59:48.000Z" title="发表于 2022-09-04 12:59:48">2022-09-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-05T05:51:17.934Z" title="更新于 2022-09-05 13:51:17">2022-09-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="常见代码案例"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>#外挂标签案例</p>
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Looking4U" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/picture/one-3672.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Looking4U</span></a><a class="nav-page-title" href="/"><span class="site-name">常见代码案例</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">常见代码案例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-04T04:59:48.000Z" title="发表于 2022-09-04 12:59:48">2022-09-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-05T05:51:17.934Z" title="更新于 2022-09-05 13:51:17">2022-09-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>#外挂标签案例</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 带 &#123;% u 下划线 %&#125; 的文本</span><br><span class="line">2. 带 &#123;% emp 着重号 %&#125; 的文本</span><br><span class="line">3. 带 &#123;% wavy 波浪线 %&#125; 的文本</span><br><span class="line">4. 带 &#123;% del 删除线 %&#125; 的文本</span><br><span class="line">5. 键盘样式的文本 &#123;% kbd command %&#125; + &#123;% kbd D %&#125;</span><br><span class="line">6. 密码样式的文本：&#123;% psw 这里没有验证码 %&#125;</span><br></pre></td></tr></table></figure>
-<p>带 <u>下划线</u> 的文本<br>
-带 <emp>着重号</emp> 的文本<br>
-带 <wavy>波浪线</wavy> 的文本<br>
-带 <del>删除线</del> 的文本<br>
-键盘样式的文本 <kbd>command</kbd> + <kbd>D</kbd><br>
+<p>带 <u>下划线</u> 的文本<br />
+带 <emp>着重号</emp> 的文本<br />
+带 <wavy>波浪线</wavy> 的文本<br />
+带 <del>删除线</del> 的文本<br />
+键盘样式的文本 <kbd>command</kbd> + <kbd>D</kbd><br />
 密码样式的文本：<psw>这里没有验证码</psw></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 彩色文字</span><br><span class="line">在一段话中方便插入各种颜色的标签，包括：&#123;% span red, 红色 %&#125;、&#123;% span yellow, 黄色 %&#125;、&#123;% span green, 绿色 %&#125;、&#123;% span cyan, 青色 %&#125;、&#123;% span blue, 蓝色 %&#125;、&#123;% span gray, 灰色 %&#125;。</span><br><span class="line">- 超大号文字</span><br><span class="line">文档「开始」页面中的标题部分就是超大号文字。</span><br><span class="line">&#123;% span center logo large, Volantis %&#125;</span><br><span class="line">&#123;% span center small, A Wonderful Theme for Hexo %&#125;</span><br></pre></td></tr></table></figure>
 <p>预览:</p>
 <ul>
-<li>彩色文字<br>
+<li>彩色文字<br />
 在一段话中方便插入各种颜色的标签，包括：<span class='p red'>红色</span>、<span class='p yellow'>黄色</span>、<span class='p green'>绿色</span>、<span class='p cyan'>青色</span>、<span class='p blue'>蓝色</span>、<span class='p gray'>灰色</span>。</li>
-<li>超大号文字<br>
+<li>超大号文字<br />
 文档「开始」页面中的标题部分就是超大号文字。<span class='p center logo large'>Volantis</span>
 <span class='p center small'>A Wonderful Theme for Hexo</span>
 </li>
@@ -201,42 +206,32 @@
 <div class="video"><video controls preload><source src='https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov' type='video/mp4'>Your browser does not support the video tag.</video></div>
 <p>诗词标签</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% poem 水调歌头,苏轼 %&#125;</span><br><span class="line">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</span><br><span class="line">明月几时有？把酒问青天。</span><br><span class="line">不知天上宫阙，今夕是何年？</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span><br><span class="line">起舞弄清影，何似在人间？</span><br><span class="line"></span><br><span class="line">转朱阁，低绮户，照无眠。</span><br><span class="line">不应有恨，何事长向别时圆？</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全。</span><br><span class="line">但愿人长久，千里共婵娟。</span><br><span class="line">&#123;% endpoem %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<div class='poem'><div class='poem-title'>水调歌头</div><div class='poem-author'>苏轼</div><p>丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。<br>
-明月几时有？把酒问青天。<br>
-不知天上宫阙，今夕是何年？<br>
-我欲乘风归去，又恐琼楼玉宇，高处不胜寒。<br>
+<div class='poem'><div class='poem-title'>水调歌头</div><div class='poem-author'>苏轼</div><p>丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。<br />
+明月几时有？把酒问青天。<br />
+不知天上宫阙，今夕是何年？<br />
+我欲乘风归去，又恐琼楼玉宇，高处不胜寒。<br />
 起舞弄清影，何似在人间？</p>
-<p>转朱阁，低绮户，照无眠。<br>
-不应有恨，何事长向别时圆？<br>
-人有悲欢离合，月有阴晴圆缺，此事古难全。<br>
+<p>转朱阁，低绮户，照无眠。<br />
+不应有恨，何事长向别时圆？<br />
+人有悲欢离合，月有阴晴圆缺，此事古难全。<br />
 但愿人长久，千里共婵娟。</p>
 </div>
 <p>math的使用</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">katex:</span><br><span class="line">  enable: true</span><br><span class="line">  # true 表示每一页都加载katex.js</span><br><span class="line">  # false 需要时加载，须在使用的Markdown Front-matter 加上 katex: true</span><br><span class="line">  per_page: false</span><br><span class="line">  hide_scrollbar: true</span><br></pre></td></tr></table></figure>
-<p>文章制定插件<br>
+<p>文章制定插件<br />
 Npm部署方式</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-swiper-bar --save</span><br><span class="line"></span><br><span class="line"># 或者</span><br><span class="line"></span><br><span class="line">cnpm i hexo-swiper-bar --save</span><br></pre></td></tr></table></figure>
 <p>配置博客main_config</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">swiper:</span><br><span class="line">  enable: true</span><br><span class="line">  priority: 2</span><br><span class="line">  enable_page: /</span><br><span class="line">  layout:</span><br><span class="line">    type: id</span><br><span class="line">    name: recent-posts</span><br><span class="line">    index: 0</span><br><span class="line">  temple_html: &#x27;&lt;div class=&quot;recent-post-item&quot; style=&quot;height: auto;width: 100%&quot;&gt;&lt;div class=&quot;blog-slider swiper-container-fade swiper-container-horizontal&quot; id=&quot;swiper_container&quot;&gt;$&#123;temple_html_item&#125;&lt;/div&gt;&lt;/div&gt;&#x27;</span><br><span class="line">  plus_style: &quot;&quot;</span><br></pre></td></tr></table></figure>
 <p>参考于<a target="_blank" rel="noopener" href="https://zfe.space/post/hexo-swiper.html">hexo置顶组件</a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://LuckyEnough-Z.github.io">张嘉译</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://luckyenough-z.github.io/p/4092cb80.html">https://luckyenough-z.github.io/p/4092cb80.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://LuckyEnough-Z.github.io" target="_blank">Looking4U</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/picture/one-3672.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/4defbc1f.html"><img class="prev-cover" src="/picture/one-3672.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">LaTex语法学习</div></div></a></div><div class="next-post pull-right"><a href="/p/adff2cde.html"><img class="next-cover" src="/picture/one-3672.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">网易云自动任务</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">张嘉译</div><div class="author-info__description">资深菜鸟</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LuckyEnough-Z"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/LuckyEnough-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zjy1718511974@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">高强度测试中，如果觉得不错的话可以<span class="inline-tag blue">点点关注</span>或者也可以<span class="inline-tag red">分享本站</span></div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js"></script><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
-margin: 0;
-align-items: center;
-justify-content: center;
-text-align: center;
-}
-canvas {
-display: block;
-margin: 0 auto;
-cursor: move;
-}</style><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/32167ff9.html" title="LaTex语法学习常用公式"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="LaTex语法学习常用公式"/></a><div class="content"><a class="title" href="/p/32167ff9.html" title="LaTex语法学习常用公式">LaTex语法学习常用公式</a><time datetime="2022-09-05T04:31:16.000Z" title="发表于 2022-09-05 12:31:16">2022-09-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/4defbc1f.html" title="LaTex语法学习"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="LaTex语法学习"/></a><div class="content"><a class="title" href="/p/4defbc1f.html" title="LaTex语法学习">LaTex语法学习</a><time datetime="2022-09-04T15:48:43.000Z" title="发表于 2022-09-04 23:48:43">2022-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/4092cb80.html" title="常见代码案例"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="常见代码案例"/></a><div class="content"><a class="title" href="/p/4092cb80.html" title="常见代码案例">常见代码案例</a><time datetime="2022-09-04T04:59:48.000Z" title="发表于 2022-09-04 12:59:48">2022-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/adff2cde.html" title="网易云自动任务"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="网易云自动任务"/></a><div class="content"><a class="title" href="/p/adff2cde.html" title="网易云自动任务">网易云自动任务</a><time datetime="2022-09-04T04:06:15.000Z" title="发表于 2022-09-04 12:06:15">2022-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/a2204dfa.html" title="林业害虫识别项目需求设计"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="林业害虫识别项目需求设计"/></a><div class="content"><a class="title" href="/p/a2204dfa.html" title="林业害虫识别项目需求设计">林业害虫识别项目需求设计</a><time datetime="2022-09-04T03:49:46.000Z" title="发表于 2022-09-04 11:49:46">2022-09-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 张嘉译</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="icp链接"><img class="icp-icon" src="https://blog.imashimaro.com/images/20200805012127.png"><span>备案号：xxxxxx</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script type="text/javascript" src="/js/custom.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://LuckyEnough-Z.github.io">张嘉译</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://luckyenough-z.github.io/p/4092cb80.html">https://luckyenough-z.github.io/p/4092cb80.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://LuckyEnough-Z.github.io" target="_blank">Looking4U</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/picture/one-3672.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/p/a2204dfa.html" title="林业害虫识别项目需求设计"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">林业害虫识别项目需求设计</div></div><div class="info-2"><div class="info-item-1"> 需求规格说明书及设计文档  项目场景  用户可以通过手机端APP拍照或者手动上传等方式提交林业有害生物图像照片，经预览，裁剪等操作处理后上传至服务器进行识别。反馈害虫种类、识别率、个数等信息。  本团队自行设计并实现一客户端+前端到服务器进行信息交换实现项目场景。项目命名为Found Pest。消息队列开发完成后，为了维护害虫样本信息我们团队开发了一套基于Vue的前后端分离的害虫信息维护系统，下文简称“该项目”。该项目支持害虫信息识别维护等功能基本实现了项目应用场景的需求。  实现思路  整体流程：选择图片==&gt;上传图片==&gt;识别图片==&gt;返回信息==&gt;接收信息==&gt;显示信息 ​						|	能够显示害虫样本并管理样本 ​						|	能够编辑用户上传的图片 信息维护==&gt;	|	能够在线识别 ​						 |	与服务器后端进行数据交互 ​						 |	能够被用户访问   功能  前端部分 ...</div></div></div></a><a class="pagination-related" href="/p/4defbc1f.html" title="LaTex语法学习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">LaTex语法学习</div></div><div class="info-2"><div class="info-item-1"> LaTex简单介绍 LaTex是一种简单文件生成系统，文件后缀为.tex  基本用法  新建一个文件，后缀名为.tex 输入基本语法框架  \documentclass&#123;article&#125;\begin&#123;document&#125; Hello world! \end&#123;document&#125;  基本语法  文档类型 ’ article ', 'book ',等等 注释使用%，转义使用\   由于时间仓促就不介绍其他参数了，直接上用法  字体设置 使用fontspec包设置字体 \usepackage&#123;fontspec&#125; \usepackage&#123;amsmath&#125; \setmainfont&#123;Times New Roman&#125; 不过一般论文使用TNR差不多了🌊  字体大小设置 \tiny \scriptsize \footnotesize \small \normalsize \large \large \LARGE \huge \Huge  一、公式部分   行内公式 $. ....</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">张嘉译</div><div class="author-info-description">资深菜鸟</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LuckyEnough-Z"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/LuckyEnough-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zjy1718511974@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">高强度测试中，如果觉得不错的话可以<span class="inline-tag blue">点点关注</span>或者也可以<span class="inline-tag red">分享本站</span></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/f618aec.html" title="数模算法集合(一)"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="数模算法集合(一)"/></a><div class="content"><a class="title" href="/p/f618aec.html" title="数模算法集合(一)">数模算法集合(一)</a><time datetime="2022-09-06T11:19:06.000Z" title="发表于 2022-09-06 19:19:06">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/32167ff9.html" title="LaTex语法学习常用公式"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="LaTex语法学习常用公式"/></a><div class="content"><a class="title" href="/p/32167ff9.html" title="LaTex语法学习常用公式">LaTex语法学习常用公式</a><time datetime="2022-09-05T04:31:16.000Z" title="发表于 2022-09-05 12:31:16">2022-09-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/4defbc1f.html" title="LaTex语法学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="LaTex语法学习"/></a><div class="content"><a class="title" href="/p/4defbc1f.html" title="LaTex语法学习">LaTex语法学习</a><time datetime="2022-09-04T15:48:43.000Z" title="发表于 2022-09-04 23:48:43">2022-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/4092cb80.html" title="常见代码案例"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="常见代码案例"/></a><div class="content"><a class="title" href="/p/4092cb80.html" title="常见代码案例">常见代码案例</a><time datetime="2022-09-04T04:59:48.000Z" title="发表于 2022-09-04 12:59:48">2022-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/a2204dfa.html" title="林业害虫识别项目需求设计"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="林业害虫识别项目需求设计"/></a><div class="content"><a class="title" href="/p/a2204dfa.html" title="林业害虫识别项目需求设计">林业害虫识别项目需求设计</a><time datetime="2022-09-04T03:49:46.000Z" title="发表于 2022-09-04 11:49:46">2022-09-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 张嘉译</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a href="icp链接"><img class="icp-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://blog.imashimaro.com/images/20200805012127.png"><span>备案号：xxxxxx</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script type="text/javascript" src="/js/custom.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
 </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
     
     var parent = document.getElementById('recent-posts');
-    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/picture/one-3672.jpg" alt="/picture/one-3672.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-09-04</span><a class="blog-slider__title" href="p/4092cb80.html">常见代码案例</a><div class="blog-slider__text">常见代码案例</div><a class="blog-slider__button" href="p/4092cb80.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/picture/one-3672.jpg" alt="/picture/one-3672.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-09-04</span><a class="blog-slider__title" href="p/4092cb80.html">常见代码案例</a><div class="blog-slider__text">常见代码案例</div><a class="blog-slider__button" href="p/4092cb80.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
     console.log('已挂载swiper')
     parent.insertAdjacentHTML("afterbegin",child)}
      </script>
