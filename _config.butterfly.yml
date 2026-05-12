@@ -579,7 +579,6 @@ activate_power_mode:
   mobile: false
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
-# DISABLED - using mouse-firework library via inject instead
 fireworks:
   enable: false
   zIndex: 9999 # -1 or 9999
@@ -911,7 +910,6 @@ inject:
     - <script type="text/javascript" src="/js/custom.js"></script>
     - <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
     - <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-    - <script src="https://cdn.jsdelivr.net/npm/mouse-firework@0.2.0/dist/index.umd.js" onload="firework({excludeElements:['a','button','input'],particles:[{shape:'circle',move:['emit'],easing:'easeOutExpo',colors:['#FF1461','#18FF92','#5A87FF','#FBF38C'],number:20,duration:[1200,1800],shapeOptions:{radius:[16,32]}}]})"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
