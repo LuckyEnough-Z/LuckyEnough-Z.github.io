@@ -9,13 +9,13 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.1"
   },
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "@neilsustc/markdown-it-katex": "^1.0.0",
-    "core-js": "^3.43.0",
-    "hexo": "^7.3.0",
+    "core-js": "^3.48.0",
+    "hexo": "^8.1.1",
     "hexo-abbrlink": "^2.2.1",
     "hexo-admin": "^2.3.0",
     "hexo-butterfly-tag-plugins-plus": "^1.0.18",
@@ -35,6 +35,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-swiper-bar": "^1.1.1",
+    "hexo-theme-butterfly": "^5.5.3",
     "hexo-theme-landscape": "^1.1.0",
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-named-headings": "^1.1.0",
