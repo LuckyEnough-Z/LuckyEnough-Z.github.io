@@ -933,6 +933,7 @@ CDN:
   custom_format:
 
   option:
+    fireworks: /js/fireworks.min.js
   # main_css:
   # main:
   # utils:
