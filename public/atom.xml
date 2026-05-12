@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Looking4U</title>
+  
+  <subtitle>个人博客</subtitle>
+  <link href="https://luckyenough-z.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://luckyenough-z.github.io/"/>
+  <updated>2025-10-07T02:27:38.633Z</updated>
+  <id>https://luckyenough-z.github.io/</id>
+  
+  <author>
+    <name>张嘉译</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信降级</title>
+    <link href="https://luckyenough-z.github.io/p/108f9a46.html"/>
+    <id>https://luckyenough-z.github.io/p/108f9a46.html</id>
+    <published>2025-10-07T02:16:28.000Z</published>
+    <updated>2025-10-07T02:27:38.633Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h2 id="微信降级教程">微信降级教程</h2><h3 id="适用于安卓">适用于安卓</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">adb shell pm uninstall -k com.tencent.mm</span><br><span class="line">adb reboot</span><br><span class="line">adb install wechat.apk</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;微信降级教程&quot;&gt;微信降级教程&lt;/h2&gt;
+&lt;h3 id=&quot;适用于安卓&quot;&gt;适用于安卓&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数模算法集合(一)</title>
+    <link href="https://luckyenough-z.github.io/p/f618aec.html"/>
+    <id>https://luckyenough-z.github.io/p/f618aec.html</id>
+    <published>2022-09-06T11:19:06.000Z</published>
+    <updated>2022-09-19T15:35:17.087Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h3 id="写在前面">写在前面</h3><p> 出于各种原因今年参加了一次“高教社”杯的数学建模比赛😆，说实话比赛题目挺难的，但是参加了比赛收获蛮多的。借此机会整理一下数学建模所有的学习资源。💇</p><p> &nbsp;其次准备整理一下所有的算法以及思路种种。</p><h3 id="资源汇总">资源汇总</h3><p>&nbsp;首先将资源整理如下:<a href="/download/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%B5%84%E6%96%99.pdf">数学建模资料</a></p><h3 id="算法分类">算法分类</h3><p> &nbsp;数学建模常见的算法大体可分为两类，一类为传统经典算法，一类为现代算法以统计学运筹学为中心，以机器学习为中心。</p><ol><li>传统经典算法：</li><li>现代化算法：</li></ol><p>​另一种分类则是以算法的用途划分：</p><pre><code>1. 评价类算法1. 优化类算法</code></pre></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
+&lt;p&gt; 出于各种原因今年参加了一次“高教社”杯的数学建模比赛😆，说实话比赛题目挺难的，但是参加了比赛收获蛮多的。借此机会整理一下数学建模所有的学习资源。💇&lt;/p&gt;
+&lt;p&gt; &amp;nb</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LaTex语法学习常用公式</title>
+    <link href="https://luckyenough-z.github.io/p/32167ff9.html"/>
+    <id>https://luckyenough-z.github.io/p/32167ff9.html</id>
+    <published>2022-09-05T04:31:16.000Z</published>
+    <updated>2022-09-05T05:51:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LaTex语法学习</title>
+    <link href="https://luckyenough-z.github.io/p/4defbc1f.html"/>
+    <id>https://luckyenough-z.github.io/p/4defbc1f.html</id>
+    <published>2022-09-04T15:48:43.000Z</published>
+    <updated>2022-09-19T14:38:57.807Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h3 id="LaTex简单介绍">LaTex简单介绍</h3><p>LaTex是一种简单文件生成系统，文件后缀为.tex</p><h3 id="基本用法">基本用法</h3><ul><li>新建一个文件，后缀名为.tex</li><li>输入基本语法框架</li></ul><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>{article}</span><br><span class="line"><span class="keyword">\begin</span>{document} </span><br><span class="line"></span><br><span class="line">Hello world! </span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>{document}</span><br></pre></td></tr></tbody></table></figure><h3 id="基本语法">基本语法</h3><ol><li>文档类型 ’ article ', 'book ',等等</li><li>注释使用%，转义使用\</li></ol><h3 id="由于时间仓促就不介绍其他参数了，直接上用法">由于时间仓促就不介绍其他参数了，直接上用法</h3><h3 id="字体设置">字体设置</h3><p>使用fontspec包设置字体</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>{fontspec} </span><br><span class="line"><span class="keyword">\usepackage</span>{amsmath} </span><br><span class="line"><span class="keyword">\setmainfont</span>{Times New Roman}</span><br></pre></td></tr></tbody></table></figure><p>不过一般论文使用TNR差不多了🌊</p><h3 id="字体大小设置">字体大小设置</h3><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\tiny</span> </span><br><span class="line"><span class="keyword">\scriptsize</span> </span><br><span class="line"><span class="keyword">\footnotesize</span> </span><br><span class="line"><span class="keyword">\small</span> </span><br><span class="line"><span class="keyword">\normalsize</span> </span><br><span class="line"><span class="keyword">\large</span> </span><br><span class="line"><span class="keyword">\large</span> </span><br><span class="line"><span class="keyword">\LARGE</span> </span><br><span class="line"><span class="keyword">\huge</span> </span><br><span class="line"><span class="keyword">\Huge</span></span><br></pre></td></tr></tbody></table></figure><h3 id="一、公式部分">一、公式部分</h3><ol><li><p>行内公式 $. . .$，独立成行使用$$…$$</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Einstein 's $E=mc^2$.   %行内</span><br></pre></td></tr></tbody></table></figure><p>$E=mc^2$</p><p>$x^2 + 2x + 5 + \sqrt x = 0$</p><p>$F=G \frac {m_{1}m_{2}}{R^{2}}$</p><p>$i\hbar\frac{\partial \psi}{\partial t} = \frac{-\hbar^2}{2m} \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y<sup>2}+\frac{\partial</sup>2}{\partial z^2} \right) \psi + V \psi<br>$</p></li><li><p>行间公式 [ …]</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">[E=mc^2]   %行内</span><br><span class="line">\[ E=mc^2. \]</span><br></pre></td></tr></tbody></table></figure><p>[ E=mc^2]</p></li><li><p>一行插入多个公式环境为flalign</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>{flalign} </span><br><span class="line">S<span class="built_in">_</span>{n+1} = S<span class="built_in">_</span>{n} + S<span class="built_in">_</span>{n},  </span><br><span class="line">S<span class="built_in">_</span>{n}=1=2<span class="built_in">^</span>{n} </span><br><span class="line"><span class="keyword">\end</span>{flalign}</span><br></pre></td></tr></tbody></table></figure><p>$\begin{flalign}<br>S_{n+1} = S_{n} + S_{n},<br>S_{n}=1=2^{n}<br>\end{flalign}$</p></li><li><p>对行间公式编号</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>{equation} </span><br><span class="line">... </span><br><span class="line"><span class="keyword">\end</span>{equation}</span><br></pre></td></tr></tbody></table></figure><p>$\begin{equation}<br>…<br>\end{equation}$</p></li><li><p>公式上下标</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">^</span>{} <span class="comment">%上标 </span></span><br><span class="line"><span class="built_in">_</span>{} <span class="comment">%下标</span></span><br></pre></td></tr></tbody></table></figure></li><li><p>分式</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\frac</span>{m}{n} <span class="comment">%n分之m</span></span><br></pre></td></tr></tbody></table></figure></li><li><p>开方</p><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\sqrt</span>{} <span class="comment">%开平方 </span></span><br><span class="line"><span class="keyword">\sqrt</span>[m]{n} <span class="comment">%n开m次方</span></span><br></pre></td></tr></tbody></table></figure></li><li><p>求和</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\sum_{i=m}^{n}  %从m到n求和</span><br></pre></td></tr></tbody></table></figure><p>$\sum_{i=m}^{n}$</p></li><li><p>求积</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\prod_{i=m}^{n} %从m到n求积</span><br></pre></td></tr></tbody></table></figure><p>$\prod_{i=m}^{n} %从m到n求积$</p></li><li><p>积分</p></li></ol><pre><code>\int_{i=m}^{n}  %从m到n积分</code></pre><p>​$\int_{i=m}^{n}  %从m到n积分$</p><ol start="11"><li><p>向量</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\vec a  %a向量 </span><br><span class="line">\overrightarrow{AB} %A到B的向量</span><br></pre></td></tr></tbody></table></figure><p>$\vec a  %a向量<br>\overrightarrow{AB} %A到B的向量$</p></li><li><p>省略号</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">a+b+\cdots+z    %a+b+…+z</span><br></pre></td></tr></tbody></table></figure><p>$a+b+\cdots+z    %a+b+…+z$</p></li><li><p>大括号</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\underbrace{a+b+\cdots+z}_{26}  %a+b+…+z</span><br></pre></td></tr></tbody></table></figure><p>$\underbrace{a+b+\cdots+z}_{26}  %a+b+…+z$</p></li><li><p>横杠</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\overline{m+n}  %m+n公式上面加上横杠 </span><br><span class="line">\underline{m+n} %m+n公式下面加上横杠</span><br></pre></td></tr></tbody></table></figure><p>$\begin{flalign}\overline{m+n},\ \underline{m+n}\end{flalign}$</p></li></ol><h3 id="二、其他内容">二、其他内容</h3></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;LaTex简单介绍&quot;&gt;LaTex简单介绍&lt;/h3&gt;
+&lt;p&gt;LaTex是一种简单文件生成系统，文件后缀为.tex&lt;/p&gt;
+&lt;h3 id=&quot;基本用法&quot;&gt;基本用法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;新建一个文件，后缀名为.te</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常见代码案例</title>
+    <link href="https://luckyenough-z.github.io/p/4092cb80.html"/>
+    <id>https://luckyenough-z.github.io/p/4092cb80.html</id>
+    <published>2022-09-04T04:59:48.000Z</published>
+    <updated>2022-09-05T05:51:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>#外挂标签案例</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1. 带 {% u 下划线 %} 的文本</span><br><span class="line">2. 带 {% emp 着重号 %} 的文本</span><br><span class="line">3. 带 {% wavy 波浪线 %} 的文本</span><br><span class="line">4. 带 {% del 删除线 %} 的文本</span><br><span class="line">5. 键盘样式的文本 {% kbd command %} + {% kbd D %}</span><br><span class="line">6. 密码样式的文本：{% psw 这里没有验证码 %}</span><br></pre></td></tr></tbody></table></figure><p>带 <u>下划线</u> 的文本<br>带 <emp>着重号</emp> 的文本<br>带 <wavy>波浪线</wavy> 的文本<br>带 <del>删除线</del> 的文本<br>键盘样式的文本 <kbd>command</kbd> + <kbd>D</kbd><br>密码样式的文本：<psw>这里没有验证码</psw></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- 彩色文字</span><br><span class="line">在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。</span><br><span class="line">- 超大号文字</span><br><span class="line">文档「开始」页面中的标题部分就是超大号文字。</span><br><span class="line">{% span center logo large, Volantis %}</span><br><span class="line">{% span center small, A Wonderful Theme for Hexo %}</span><br></pre></td></tr></tbody></table></figure><p>预览:</p><ul><li>彩色文字<br>在一段话中方便插入各种颜色的标签，包括：<span class="p red">红色</span>、<span class="p yellow">黄色</span>、<span class="p green">绿色</span>、<span class="p cyan">青色</span>、<span class="p blue">蓝色</span>、<span class="p gray">灰色</span>。</li><li>超大号文字<br>文档「开始」页面中的标题部分就是超大号文字。<span class="p center logo large">Volantis</span><span class="p center small">A Wonderful Theme for Hexo</span></li></ul><div class="note success simple"><p>success 提示块标签</p></div><p>复选列表</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{% checkbox 纯文本测试 %}</span><br><span class="line">{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}</span><br><span class="line">{% checkbox red, 支持自定义颜色 %}</span><br><span class="line">{% checkbox green checked, 绿色 + 默认选中 %}</span><br><span class="line">{% checkbox yellow checked, 黄色 + 默认选中 %}</span><br><span class="line">{% checkbox cyan checked, 青色 + 默认选中 %}</span><br><span class="line">{% checkbox blue checked, 蓝色 + 默认选中 %}</span><br><span class="line">{% checkbox plus green checked, 增加 %}</span><br><span class="line">{% checkbox minus yellow checked, 减少 %}</span><br><span class="line">{% checkbox times red checked, 叉 %}</span><br></pre></td></tr></tbody></table></figure><p>预览:</p><div class="checkbox"><input type="checkbox">            <p>纯文本测试</p>            </div><div class="checkbox checked"><input type="checkbox" checked="checked">            <p>支持简单的 <a href="https://guides.github.com/features/mastering-markdown/">markdown</a> 语法</p>            </div><div class="checkbox red"><input type="checkbox">            <p>支持自定义颜色</p>            </div><div class="checkbox green checked"><input type="checkbox" checked="checked">            <p>绿色 + 默认选中</p>            </div><div class="checkbox yellow checked"><input type="checkbox" checked="checked">            <p>黄色 + 默认选中</p>            </div><div class="checkbox cyan checked"><input type="checkbox" checked="checked">            <p>青色 + 默认选中</p>            </div><div class="checkbox blue checked"><input type="checkbox" checked="checked">            <p>蓝色 + 默认选中</p>            </div><div class="checkbox plus green checked"><input type="checkbox" checked="checked">            <p>增加</p>            </div><div class="checkbox minus yellow checked"><input type="checkbox" checked="checked">            <p>减少</p>            </div><div class="checkbox times red checked"><input type="checkbox" checked="checked">            <p>叉</p>            </div><p>视频</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><p>预览:</p><div class="video"><video controls="" preload=""><source src="https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov" type="video/mp4">Your browser does not support the video tag.</video></div><p>诗词标签</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{% poem 水调歌头,苏轼 %}</span><br><span class="line">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</span><br><span class="line">明月几时有？把酒问青天。</span><br><span class="line">不知天上宫阙，今夕是何年？</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span><br><span class="line">起舞弄清影，何似在人间？</span><br><span class="line"></span><br><span class="line">转朱阁，低绮户，照无眠。</span><br><span class="line">不应有恨，何事长向别时圆？</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全。</span><br><span class="line">但愿人长久，千里共婵娟。</span><br><span class="line">{% endpoem %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><div class="poem"><div class="poem-title">水调歌头</div><div class="poem-author">苏轼</div><p>丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。<br>明月几时有？把酒问青天。<br>不知天上宫阙，今夕是何年？<br>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。<br>起舞弄清影，何似在人间？</p><p>转朱阁，低绮户，照无眠。<br>不应有恨，何事长向别时圆？<br>人有悲欢离合，月有阴晴圆缺，此事古难全。<br>但愿人长久，千里共婵娟。</p></div><p>math的使用</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">katex:</span><br><span class="line">  enable: true</span><br><span class="line">  # true 表示每一页都加载katex.js</span><br><span class="line">  # false 需要时加载，须在使用的Markdown Front-matter 加上 katex: true</span><br><span class="line">  per_page: false</span><br><span class="line">  hide_scrollbar: true</span><br></pre></td></tr></tbody></table></figure><p>文章制定插件<br>Npm部署方式</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm i hexo-swiper-bar --save</span><br><span class="line"></span><br><span class="line"># 或者</span><br><span class="line"></span><br><span class="line">cnpm i hexo-swiper-bar --save</span><br></pre></td></tr></tbody></table></figure><p>配置博客main_config</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">swiper:</span><br><span class="line">  enable: true</span><br><span class="line">  priority: 2</span><br><span class="line">  enable_page: /</span><br><span class="line">  layout:</span><br><span class="line">    type: id</span><br><span class="line">    name: recent-posts</span><br><span class="line">    index: 0</span><br><span class="line">  temple_html: '&lt;div class="recent-post-item" style="height: auto;width: 100%"&gt;&lt;div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"&gt;${temple_html_item}&lt;/div&gt;&lt;/div&gt;'</span><br><span class="line">  plus_style: ""</span><br></pre></td></tr></tbody></table></figure><p>参考于<a href="https://zfe.space/post/hexo-swiper.html">hexo置顶组件</a></p></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;#外挂标签案例&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 带 </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>林业害虫识别项目需求设计</title>
+    <link href="https://luckyenough-z.github.io/p/a2204dfa.html"/>
+    <id>https://luckyenough-z.github.io/p/a2204dfa.html</id>
+    <published>2022-09-04T03:49:46.000Z</published>
+    <updated>2022-09-05T05:51:17.949Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h1>需求规格说明书及设计文档</h1><h2 id="项目场景">项目场景</h2><blockquote><p>用户可以通过手机端APP拍照或者手动上传等方式提交林业有害生物图像照片，经预览，裁剪等操作处理后上传至服务器进行识别。反馈害虫种类、识别率、个数等信息。</p></blockquote><p>本团队自行设计并实现一客户端+前端到服务器进行信息交换实现项目场景。项目命名为Found Pest。消息队列开发完成后，为了维护害虫样本信息我们团队开发了一套基于Vue的前后端分离的害虫信息维护系统，下文简称“该项目”。该项目支持害虫信息识别维护等功能基本实现了项目应用场景的需求。</p><h2 id="实现思路">实现思路</h2><blockquote><p>整体流程：选择图片==&gt;上传图片==&gt;识别图片==&gt;返回信息==&gt;接收信息==&gt;显示信息</p><p>​|能够显示害虫样本并管理样本</p><p>​|能够编辑用户上传的图片</p><p>信息维护==&gt;|能够在线识别</p><p>​ |与服务器后端进行数据交互</p><p>​ |能够被用户访问</p></blockquote><h2 id="功能">功能</h2><h3 id="前端部分">前端部分</h3><h4 id="用户-管理员共有功能">用户/管理员共有功能</h4><ol><li>用户功能：<ol><li>包括用户注册和登录</li><li>查看害虫信息</li><li>忘记密码后找回密码</li></ol></li><li>害虫信息维护功能：<ol><li>浏览害虫样本信息等</li></ol></li><li>样本检索功能：<ol><li>可以检索害虫样本</li></ol></li><li>上传图片管理功能：<ol><li>管理移动端上传的图片</li></ol></li><li>数据集管理功能:</li><li>可视化展示功能</li><li>在线识别功能呢</li></ol><h2 id="技术–访问服务器部分">技术–访问服务器部分</h2><h3 id="后端技术栈">后端技术栈</h3><ul><li>开发工具：Pycharm</li><li>Vue：项目基础框架</li><li>html +CSS ：HTML5语言</li></ul><h3 id="前端技术栈">前端技术栈</h3><ul><li>开发工具：IDEA</li><li>Vue：渐进式框架</li><li>Vue Router：VUE路由插件用来管理各个页面</li><li>VueX：VUE状态管理</li><li>Axios ：一个基于 promise 的 HTTP 库，用于GET/POST请求</li><li>Node.js+webpack：项目构建工具</li></ul><h3 id="移动端技术栈">移动端技术栈</h3><ul><li>开发工具：Hbuilder X</li><li>Uniapp:是一个使用 <a href="https://vuejs.org/">Vue.js (opens new window)</a>开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序</li></ul><h3 id="技术介绍">技术介绍</h3><h4 id="技术规格及应用介绍">技术规格及应用介绍</h4><p>本项目前端基于Vue渐进式框架开发，基本遵守HTML开发规范、Vue-Cli开发规范及Webpack开发规范；后端基于Python+flask框架开发。下面将从HTTP请求开始介绍本项目的技术特点。</p><ol><li><p>通过HTTP协议访问托管在服务器端的项目，通过Nginx集群，均衡负载返回页面</p></li><li><p>页面内通过Axios提供的request方式GET/POST请求页面内的数据</p></li><li><p>Nginx接收到请求地址后指向localhost:8090前端部分打开页面</p></li><li><p>App端与服务器交互，使用Base64压缩图片与服务器进行交互</p></li></ol><h4 id="数据库模型图">数据库模型图</h4><h4 id="项目工程截图">项目工程截图</h4><p>​前端部分</p><img src="C:\Users\LuckyEnough.z\AppData\Roaming\Typora\typora-user-images\image-20220430161809291.png" alt="image-20220430161809291" style="zoom: 50%;"><p>​后端部分</p><img src="C:\Users\LuckyEnough.z\AppData\Roaming\Typora\typora-user-images\image-20220430161930231.png" alt="image-20220430161930231" style="zoom: 50%;"><p>移动端</p><p>​<img src="C:\Users\LuckyEnough.z\AppData\Roaming\Typora\typora-user-images\image-20220430162034356.png" alt="image-20220430162034356" style="zoom:50%;"></p><h2 id="技术–害虫识别算法部分">技术–害虫识别算法部分</h2><p>基于YOLOV5算法实现的 害虫识别的功能，通过Flask框架接收数据与前端+App通信,前端通过Ajax.request与服务器进行交互，App端通过Uniapp原生API即uni.upload接口与服务器进行数据交互。</p><h3 id="支持害虫识别的种类">支持害虫识别的种类</h3><ul><li><p>100类害虫在线样本检索</p><figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line">黑蚱蝉蟪蛄蒙古寒蝉菜蝽茶翅蝽赤条蝽麻皮蝽硕蝽大皱蝽碧蛾蜡蝉大田鳖柿广翅蜡蝉透翅疏广蜡蝉斑衣蜡蝉草履蚧悬铃木方翅网蝽中华象蜡蝉大青叶蝉小绿叶蝉刺肩普缘蝽稻棘缘蝽点蜂缘蝽钝肩普缘蝽(钝角普缘蝽)虎斑蝶金斑蝶玉带斑蛾重阳木锦斑蛾大叶黄杨尺蛾四星尺蛾小蜻蜓尺蛾扁刺蛾褐边绿刺蛾黄刺蛾红尾大蚕蛾绿尾大蚕蛾八点灰灯蛾红缘灯蛾花布灯蛾美国白蛾强污灯蛾人纹污灯蛾优美苔蛾侧柏毒蛾盗毒蛾(黄尾毒蛾)柳毒蛾线茸毒蛾菜粉蝶碧凤蝶柑橘凤蝶金凤蝶蓝凤蝶麝凤蝶丝带凤蝶玉带凤蝶樟青凤蝶洋麻圆钩蛾桃小食心虫大红蛱蝶二尾蛱蝶黑脉蛱蝶黄钩蛱蝶柳紫闪蛱蝶马尾松毛虫黄杨绢野螟桃蛀螟樟巢螟缀叶丛螟豆天蛾甘薯天蛾红天蛾蓝目天蛾葡萄天蛾雀纹天蛾霜天蛾变色夜蛾臭椿皮蛾胡桃豹夜蛾斜纹夜蛾旋目夜蛾分月扇舟蛾核桃美舟蛾杨二尾舟蛾杨扇舟蛾杨小舟蛾白星花金龟黄粉鹿花金龟日本脊吉丁</span><br><span class="line">犀角粪金龟薄翅锯天牛(中华薄翅天牛) 中华大扁锹光肩星天牛桑天牛双条杉天牛松墨天牛桃红颈天牛星天牛锈色粒肩天牛云斑白条天牛柳蓝叶甲</span><br></pre></td></tr></tbody></table></figure></li><li><p>15类害虫的在线识别</p><figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line">"草履蚧", "麻皮蝽", "日本脊吉丁", "星天牛", "桑天牛", "松墨天牛", "柳蓝叶甲", "黄刺蛾", "褐边绿刺蛾", "丝带凤蝶", "人纹污灯蛾", "霜天蛾","杨扇舟蛾", "杨小舟蛾", "美国白蛾"</span><br></pre></td></tr></tbody></table></figure></li></ul><h3 id="接口对接实现样例">接口对接实现样例</h3><p>前端识别接口调用样例</p><p>后端数据库</p><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Species</span>(db.Model):</span><br><span class="line">    <span class="comment"># 定义表名</span></span><br><span class="line">    __tablename__ = <span class="string">'t_species'</span></span><br><span class="line">    <span class="comment"># 定义列对象</span></span><br><span class="line">    <span class="built_in">id</span> = db.Column(db.Integer, primary_key=<span class="literal">True</span>, autoincrement=<span class="literal">True</span>)</span><br><span class="line">    name = db.Column(db.String(<span class="number">60</span>))</span><br><span class="line">    code = db.Column(db.String(<span class="number">60</span>), unique=<span class="literal">True</span>)</span><br><span class="line">    latin_name = db.Column(db.String(<span class="number">60</span>))</span><br><span class="line">    distribution_plants = db.Column(db.Text)</span><br><span class="line">    distribution_area = db.Column(db.Text)</span><br><span class="line">    sample_path = db.Column(db.String(<span class="number">60</span>))</span><br><span class="line"></span><br><span class="line">    genus_id = db.Column(db.Integer, db.ForeignKey(<span class="string">'t_genus.id'</span>, ondelete=<span class="string">'CASCADE'</span>))</span><br><span class="line">    genus = db.relationship(<span class="string">"Genus"</span>, backref=db.backref(<span class="string">'specieses'</span>, cascade=<span class="string">"all, delete-orphan"</span>))</span><br></pre></td></tr></tbody></table></figure><p>&lt;Scan.vue&gt;</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;Upload</span><br><span class="line">     :format="['jpg','jpeg','png']" //规定图片格式，不一致就报错</span><br><span class="line">     :on-success="handleSuccess"  //将图片选定后就执行上传方法</span><br><span class="line">     :on-format-error="handleFormatError" //报错的方法</span><br><span class="line">     action="http://42.192.237.135:8090/FPIMS/detection_withFile/"&gt; //请求的地址</span><br><span class="line">    &lt;Button type="primary" icon="ios-cloud-upload-outline"&gt;&lt;/Button&gt; //点击按钮会执行上传图片的方法</span><br><span class="line">&lt;/Upload&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    method:{</span><br><span class="line">        handleSuccess (res, file) {//res :临时数组用来存储返沪的信息  file：上传的图片对象</span><br><span class="line">        this.$data.original_img_path = res.save_img_path;//接收临时图片地址</span><br><span class="line">        this.$data.detect_time = res.detect_time;//接收返回识别时间</span><br><span class="line">    }</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure><p>后端接口返回信息</p><p><a href="http://app.py">app.py</a> —detection_withfile</p><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">'/FPIMS/detection_withFile/'</span>, methods=[<span class="string">'GET'</span>, <span class="string">'POST'</span>]</span>)</span><span class="comment">#Get:接收待处理图片 #Post：将处理后的图片与识别结果返回前端</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">detection_with_file</span>():  <span class="comment">#定义函数用来调用</span></span><br><span class="line">    file = request.files[<span class="string">'file'</span>]<span class="comment">#接收前端传来的</span></span><br><span class="line">    file.save(image_path)</span><br><span class="line">    <span class="comment"># 将保存的图片输入网络进行推测</span></span><br><span class="line">    processed_img, recognition_res = app.detect(cv2.imread(image_path),Species)</span><br><span class="line">    <span class="comment">#img_path：前端传来的的图片地址</span></span><br><span class="line">    <span class="comment">#Species:数据库对象用来查数据</span></span><br><span class="line">    <span class="comment"># 推测后的图片保存到processed目录</span></span><br><span class="line">    cv2.imwrite(<span class="string">'./picture_data/detect/processed/{}'</span>.<span class="built_in">format</span>(processed_filename), <span class="comment">#处理的图片)</span></span><br><span class="line">    <span class="comment"># 将“结果拼成字符串”和“推测后的图片的路径”一起传给前端</span></span><br><span class="line">    res = img_path_processed + <span class="string">'-'</span> + recognition_res <span class="comment">#结果数组</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></tbody></table></figure><h3 id="项目基本使用方式">项目基本使用方式</h3><ol><li>运行后端app.py启动服务器</li><li>启动前端静态网页或者Vue项目 npm run server</li><li>启动手机端app</li></ol><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">#在后端服务器文件夹运行服务器</span></span><br><span class="line">python app.py</span><br><span class="line"><span class="comment">#在前端启动Vue项目文件</span></span><br><span class="line">npm run server</span><br></pre></td></tr></tbody></table></figure><h3 id="结果展示">结果展示</h3></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;需求规格说明书及设计文档&lt;/h1&gt;
+&lt;h2 id=&quot;项目场景&quot;&gt;项目场景&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户可以通过手机端APP拍照或者手动上传等方式提交林业有害生物图像照片，经预览，裁剪等操作处理后上传至服务</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数学建模学习历程</title>
+    <link href="https://luckyenough-z.github.io/p/8bfd4855.html"/>
+    <id>https://luckyenough-z.github.io/p/8bfd4855.html</id>
+    <published>2022-09-03T15:16:36.000Z</published>
+    <updated>2026-05-12T09:10:50.974Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><img src="http://120.48.40.208:8088/blog/images/xtfmBuvcaGpjWAX.jpg" alt="birds-g7ef62656c_1920" style="zoom: 25%;"><h2 id="综述">综述</h2><p>每年数学建模比赛有许多，具体可百度，但是，目前来看只有国赛的认可度最高，由此参加国赛想碰碰运气</p><h3 id="比赛需要干什么？">比赛需要干什么？</h3><p>1.写论文</p><p>2.绘图</p><p>3.对实际的问题进行建模解决</p><p>代码不查重</p></body></html>]]></content>
+    
+    
+    <summary type="html">关于数学建模的学习</summary>
+    
+    
+    
+    
+    <category term="学习" scheme="https://luckyenough-z.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教材选购</title>
+    <link href="https://luckyenough-z.github.io/p/c42187b7.html"/>
+    <id>https://luckyenough-z.github.io/p/c42187b7.html</id>
+    <published>2022-09-03T14:29:09.000Z</published>
+    <updated>2022-09-05T05:51:17.944Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h4 id="教材选购">教材选购</h4><p><i class="iconfont icon-shu">待采购列表</i></p><table><thead><tr><th>书名</th><th>IBSN</th></tr></thead><tbody><tr><td>零基础学Android全彩版</td><td>9787569208542</td></tr><tr><td>人工智能</td><td>9787302572541</td></tr><tr><td>OpenCV计算机视觉基础教程（Python版）</td><td>9787115561770</td></tr><tr><td>管理信息系统实践教程</td><td>9787302551140</td></tr></tbody></table><p><i class="iconfont icon--">已采购列表</i></p><table><thead><tr><th>书名</th><th>资源</th></tr></thead><tbody><tr><td>计算机网络</td><td><a href="/download/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%88%E7%AC%AC8%E7%89%88%EF%BC%89.pdf">计算机网络（第8版）.pdf</a></td></tr><tr><td>商务智能</td><td><a href="/download/%E5%95%86%E5%8A%A1%E6%99%BA%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf">商务智能与数据挖掘（第2版）.pdf</a></td></tr><tr><td>计算机组成原理</td><td><a href="/download/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC3%E7%89%88.pdf">计算机组成原理第3版.pdf</a></td></tr><tr><td>操作系统原理</td><td><a href="/download/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E7%AC%AC%E5%9B%9B%E7%89%88%EF%BC%89.pdf">计算机操作系统（第四版）.pdf</a></td></tr></tbody></table></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;教材选购&quot;&gt;教材选购&lt;/h4&gt;
+&lt;p&gt;&lt;i class=&quot;iconfont icon-shu&quot;&gt;待采购列表&lt;/i&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;书名&lt;/th&gt;
+&lt;th&gt;IBSN&lt;/th</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://luckyenough-z.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建站感言</title>
+    <link href="https://luckyenough-z.github.io/p/d0725f51.html"/>
+    <id>https://luckyenough-z.github.io/p/d0725f51.html</id>
+    <published>2022-09-02T14:57:43.000Z</published>
+    <updated>2022-09-05T05:51:17.944Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>置顶链接</p><p>经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点🌈，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。</p><p>Hexo 是一款“快速、简洁且高效的博客框架”，支持 Markdown 的所有功能。所以，写出一篇博客必须学习 Hexo 和 Markdown 的使用规则。</p><p>H<sub>2</sub>O 💧</p><p>臣亮言：<mark class="hl-label default">先帝</mark>创业未半，而<mark class="hl-label blue">中道崩殂</mark>。今天下三分，<mark class="hl-label pink">益州疲敝</mark>，此诚<mark class="hl-label red">危急存亡之秋</mark>也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark>，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark>、<mark class="hl-label green">犯科</mark>，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;置顶链接&lt;/p&gt;
+&lt;p&gt;经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点🌈，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。&lt;/p&gt;
+&lt;p&gt;Hexo 是一款“快速、简洁且高效的博客框架”，</summary>
+      
+    
+    
+    
+    
+    <category term="经验分享" scheme="https://luckyenough-z.github.io/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+</feed>
