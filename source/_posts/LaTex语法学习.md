@@ -148,13 +148,13 @@ Hello world!
     \prod_{i=m}^{n} %从m到n求积
     ```
 
-    $\prod_{i=m}^{n} %从m到n求积$
+    $\prod_{i=m}^{n}$ %从m到n求积
 
  10. 积分
 
     \int_{i=m}^{n}  %从m到n积分
 
-​		$\int_{i=m}^{n}  %从m到n积分$
+​		$\int_{i=m}^{n}$  %从m到n积分
 
  11. 向量
 
@@ -163,8 +163,8 @@ Hello world!
      \overrightarrow{AB} %A到B的向量
      ```
 
-     $\vec a  %a向量 
-     \overrightarrow{AB} %A到B的向量$
+     $\vec a$ %a向量 
+     $\overrightarrow{AB}$ %A到B的向量
 
  12. 省略号
 
@@ -172,7 +172,7 @@ Hello world!
      a+b+\cdots+z    %a+b+…+z
      ```
 
-     $a+b+\cdots+z    %a+b+…+z$
+     $a+b+\cdots+z    \%a+b+…+z$
 
  13. 大括号
 
@@ -180,7 +180,7 @@ Hello world!
      \underbrace{a+b+\cdots+z}_{26}  %a+b+…+z
      ```
 
-     $\underbrace{a+b+\cdots+z}_{26}  %a+b+…+z$
+     $\underbrace{a+b+\cdots+z}_{26}$ %a+b+…+z
 
  14. 横杠
 
