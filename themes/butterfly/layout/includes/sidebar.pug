@@ -3,7 +3,7 @@ if theme.menu
     #menu-mask
     #sidebar-menus
       .avatar-img.text-center
-        img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='${url_for(theme.error_img.flink)}'` alt="avatar")
+        img(src=url_for(theme.avatar.img) loading='eager' onerror=`this.onerror=null;this.src='${url_for(theme.error_img.flink)}'` alt="avatar")
       .site-data.text-center
         a(href=`${url_for(config.archive_dir)}/`)
           .headline= _p('aside.articles')
