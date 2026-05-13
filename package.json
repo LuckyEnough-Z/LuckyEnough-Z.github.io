@@ -14,7 +14,7 @@
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "@neilsustc/markdown-it-katex": "^1.0.0",
-    "core-js": "^3.48.0",
+    "core-js": "^3.49.0",
     "hexo": "^8.1.2",
     "hexo-abbrlink": "^2.2.1",
     "hexo-admin": "^2.3.0",
