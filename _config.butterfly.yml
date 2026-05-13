@@ -858,8 +858,8 @@ pangu:
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: true
-  onlypost: false
-  loadingImg: /img/link.jpg
+  native: true
+  field: site
 #  post: /img/loading.gif
 
 # PWA
