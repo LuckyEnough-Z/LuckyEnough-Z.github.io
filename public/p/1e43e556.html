@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f） | Looking4U</title><meta name="author" content="张嘉译"><meta name="copyright" content="张嘉译"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 声明：本文仅记录在本人自有账号、自有路由器上的网络配置实践，用于多设备共享自用，不涉及破解计费、不针对他人。文中所有账号 / 密码 / token / 公网 IP 均已打码。请遵守所在学校的网络管理规定，风险自负。   背景 重庆大学校园网认证端点迁移到了 login.cqu.edu.cn（..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）",
+  "url": "https://luckyenough-z.github.io/p/1e43e556.html",
+  "image": "https://luckyenough-z.github.io/picture/one-3672.jpg",
+  "datePublished": "2026-05-16T12:00:00.000Z",
+  "dateModified": "2026-05-16T12:06:33.778Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "张嘉译",
+      "url": "https://LuckyEnough-Z.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/head.png"><link rel="canonical" href="https://luckyenough-z.github.io/p/1e43e556.html"><link rel="preconnect" href="//unpkg.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://unpkg.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://unpkg.com/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Looking4U" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head.png" loading="eager" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/picture/one-3672.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Looking4U</span></a><a class="nav-page-title" href="/"><span class="site-name">重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于</span></a></li><li><a class="site-page child" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fas fa-heart"></i><span> butterfly主题</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-16T12:00:00.000Z" title="发表于 2026-05-16 20:00:00">2026-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-16T12:06:33.778Z" title="更新于 2026-05-16 20:06:33">2026-05-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>声明：本文仅记录在<strong>本人自有账号、自有路由器</strong>上的网络配置实践，用于多设备共享自用，不涉及破解计费、不针对他人。文中所有账号 / 密码 / token / 公网 IP 均已打码。请遵守所在学校的网络管理规定，风险自负。</p>
+</blockquote>
+<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
+<p>重庆大学校园网认证端点迁移到了 <code>login.cqu.edu.cn</code>（旧的固定 IP 认证作废），同时上线了<strong>多设备共享检测</strong>：一个账号下若被识别出多台设备，会提示&quot;检测到共享 / 请勿使用代理&quot;并冻结一段时间。</p>
+<p>我的方案是一台 OpenWrt 路由器做主路由：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">客户端 → nftables(TPROXY拦截) → hev-socks5-tproxy → ua3f(UA改写) → 校园网</span><br></pre></td></tr></table></figure>
+<p>认证部分用了一个自己 fork 改造的 LuCI 插件（适配 <code>login.cqu.edu.cn</code> 的新 JSONP 协议，账号 <code>2025********</code>、密码均在路由器本地配置，不外泄）。本文不讲认证，只讲<strong>怎么尽量不被多设备检测，同时还能用</strong>。</p>
+<h2 id="一个核心认知"><a class="markdownIt-Anchor" href="#一个核心认知"></a> 一个核心认知</h2>
+<p>ua3f 是个 <strong>SOCKS5 终结点</strong>：hev-socks5-tproxy 把 TPROXY 拦下的流量交给它，它<strong>关闭客户端 TCP、用路由器自己的协议栈重新发起一条新连接</strong>。</p>
+<p>所以——凡是<strong>进了代理</strong>的流量，对外的 L3/L4 指纹（TTL、IP-ID、TCP options/时间戳、源端口行为）统一成路由器这一台，再叠加 HTTP UA 改写，对外等效&quot;一台主机&quot;。</p>
+<blockquote>
+<p>结论：检测能抓到的，只有<strong>漏出代理</strong>的流量。加固 = 让尽量多的流量进代理 + 抑制进不了代理的流量。</p>
+</blockquote>
+<p>下面按&quot;检测维度 → 处理&quot;组织。环境示例：LAN <code>192.168.1.0/24</code>、WAN 口 <code>eth0.1</code>、WAN 地址 <code>10.244.x.x</code>。</p>
+<h2 id="p0关掉-ipv6最关键"><a class="markdownIt-Anchor" href="#p0关掉-ipv6最关键"></a> P0：关掉 IPv6（最关键）</h2>
+<p>TPROXY 规则只处理 IPv4（<code>tproxy ip to</code>）。客户端只要有全局 IPv6 地址，就绕过 NAT 和代理，<strong>每台设备的 v6 地址直接暴露</strong>，前面所有努力白费。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uci <span class="built_in">set</span> dhcp.lan.ra_slaac=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">uci <span class="built_in">set</span> dhcp.lan.ra=<span class="string">&#x27;disabled&#x27;</span></span><br><span class="line">uci <span class="built_in">set</span> dhcp.lan.dhcpv6=<span class="string">&#x27;disabled&#x27;</span></span><br><span class="line">uci -q delete network.wan6</span><br><span class="line">uci commit</span><br><span class="line">grep -q disable_ipv6 /etc/sysctl.conf || &#123;</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&#x27;net.ipv6.conf.all.disable_ipv6=1&#x27;</span>     &gt;&gt; /etc/sysctl.conf</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&#x27;net.ipv6.conf.default.disable_ipv6=1&#x27;</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line">&#125;</span><br><span class="line">sysctl -p</span><br><span class="line">/etc/init.d/odhcpd restart; /etc/init.d/network reload</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>network reload</code> 会瞬断 WAN，校园门户掉线几十秒后认证守护会自动重连。</p>
+</blockquote>
+<h2 id="p1拦截范围从端口白名单改成几乎全部-tcp"><a class="markdownIt-Anchor" href="#p1拦截范围从端口白名单改成几乎全部-tcp"></a> P1：拦截范围从&quot;端口白名单&quot;改成&quot;几乎全部 TCP&quot;</h2>
+<p>很多教程的 TPROXY 只拦 <code>{80,8080,...}</code> 几个端口。实测发现：任意端口的明文 HTTP（例如某服务跑在 <code>:8000</code>）会<strong>整条漏出去</strong>，真实 UA 直达服务器。</p>
+<p>把规则改成&quot;除 443 和 LAN 本地外的全部 TCP 都进代理&quot;（<code>/etc/nfts/100-tproxy.nft</code>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">table inet tproxy_table &#123;</span><br><span class="line">    chain prerouting &#123;</span><br><span class="line">        type filter hook prerouting priority -100; policy accept;</span><br><span class="line">        iifname &quot;br-lan&quot; ip daddr != 192.168.1.0/24 tcp dport != 443 \</span><br><span class="line">            tproxy ip to 127.0.0.1:1088 mark set 1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>排除 <code>192.168.1.0/24</code>：不劫持本机 SSH/管理页和内网互访（<strong>防把自己锁外面</strong>，按自己 LAN 段改）。</li>
+<li>排除 <code>dport 443</code>：HTTPS 直连，避免把 TLS 大流量全压到弱 CPU（性价比折中）。</li>
+<li><strong>不要</strong>排除 <code>10.0.0.0/8</code>：校园认证 / 内网就是 <code>10.x</code>，得继续走代理改写。</li>
+<li>代价：443 仍直连 → 它的 TLS 指纹（见后文残留）改不掉。</li>
+</ul>
+<h2 id="p2统一-ttl-以及那个最容易踩的坑"><a class="markdownIt-Anchor" href="#p2统一-ttl-以及那个最容易踩的坑"></a> P2：统一 TTL —— 以及那个最容易踩的坑</h2>
+<p>多种客户端 OS 的初始 TTL 不同（Windows 128 / Linux·Android·iOS 64），经路由器再 -1，服务器看到一组离散 TTL 就知道你后面挂了多台不同系统。</p>
+<p>新增 <code>/etc/nfts/110-cqu-hardening.nft</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">table inet cqu_hardening &#123;</span><br><span class="line">    chain cqu_post &#123;</span><br><span class="line">        type filter hook postrouting priority mangle; policy accept;</span><br><span class="line">        oifname &quot;eth0.1&quot; ip ttl set 64</span><br><span class="line">    &#125;</span><br><span class="line">    chain cqu_forward &#123;</span><br><span class="line">        type filter hook forward priority -10; policy accept;</span><br><span class="line">        iifname &quot;br-lan&quot; oifname &quot;eth0.1&quot; udp dport 443 reject   # P3: 封 QUIC</span><br><span class="line">        iifname &quot;br-lan&quot; meta nfproto ipv6 counter drop          # P0 兜底</span><br><span class="line">    &#125;</span><br><span class="line">    chain cqu_nat &#123;</span><br><span class="line">        type nat hook prerouting priority dstnat; policy accept;</span><br><span class="line">        iifname &quot;br-lan&quot; udp dport 123 redirect to :123          # NTP 收敛</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>小坑：nft 里 chain 不能命名为 <code>fwd</code>，那是保留字。</p>
+</blockquote>
+<h3 id="️-关键坑不关-flow-offloadttl-改写是假的"><a class="markdownIt-Anchor" href="#️-关键坑不关-flow-offloadttl-改写是假的"></a> ⚠️ 关键坑：不关 flow offload，TTL 改写是假的</h3>
+<p>OpenWrt 默认开 <strong>软件/硬件流量卸载（flow offloading）</strong>。被卸载的连接走 fastpath 快速转发，<strong>直接跳过 netfilter 的 postrouting hook</strong>——也就是说上面的 <code>ip ttl set 64</code> 对这些连接<strong>根本没执行</strong>。</p>
+<p>实测：开着 offload 时 <code>conntrack</code> 里大量连接带 <code>[OFFLOAD]</code> 标记，那条 <code>ttl set</code> 规则的计数远小于真实流量；关掉后单核负载从 <code>0.07</code> 直接飙到 <code>1.16</code>（流量全部回到协议栈）。</p>
+<p>所以必须关：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uci <span class="built_in">set</span> firewall.@defaults[0].flow_offloading=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">uci <span class="built_in">set</span> firewall.@defaults[0].flow_offloading_hw=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">uci commit firewall</span><br><span class="line">/etc/init.d/firewall restart</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>同理 <code>fullcone</code>（全锥 NAT）在部分实现里也会绕 hook，介意可一并关，代价是 P2P/游戏 NAT 类型变差。</p>
+</blockquote>
+<p>这一步是好多人&quot;配了 TTL 还是被检测&quot;的根因。</p>
+<h2 id="p3封-quic"><a class="markdownIt-Anchor" href="#p3封-quic"></a> P3：封 QUIC</h2>
+<p>浏览器默认机会性走 HTTP/3（QUIC over UDP 443），它带类 TLS 指纹、流量大，且<strong>完全绕过 TCP 代理链路</strong>。上面 <code>cqu_forward</code> 里 <code>udp dport 443 reject</code> 一句把它打掉，浏览器会自动回落到 TCP（再被 ua3f 处理）。<code>reject</code> 比 <code>drop</code> 回落更快。</p>
+<h2 id="ntp被忽略的强特征"><a class="markdownIt-Anchor" href="#ntp被忽略的强特征"></a> NTP：被忽略的强特征</h2>
+<p>不同设备默认 NTP 服务器、对时频率都不一样，<code>udp/123</code> 直连出去就是一组多设备特征。处理方式：路由器自己当 NTP server，把客户端的 123 全部重定向到本地（上面 <code>cqu_nat</code> 已含 redirect）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uci <span class="built_in">set</span> system.ntp.enable_server=<span class="string">&#x27;1&#x27;</span></span><br><span class="line">uci commit system</span><br><span class="line">/etc/init.d/sysntpd restart</span><br></pre></td></tr></table></figure>
+<p>效果：客户端以为在和公网 NTP 对话，其实被路由器本地应答；对外只剩路由器一个 NTP client 同步上游，多设备 NTP 特征收敛成一个。</p>
+<h2 id="ua伪装值本身别穿帮"><a class="markdownIt-Anchor" href="#ua伪装值本身别穿帮"></a> UA：伪装值本身别穿帮</h2>
+<p>ua3f 的 <code>-f</code> 一定要是<strong>真实存在、当前主流</strong>的 UA。我接手时它被设成了带 <code>CoolMarket/14.2.3-...</code>（某 App 尾巴）的串——桌面 Chrome 不可能带这种尾巴，所有设备统一成这个<strong>不存在的客户端组合</strong>，本身就是个显眼特征。换成干净的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uci <span class="built_in">set</span> ua3f.main.ua=<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36&#x27;</span></span><br><span class="line">uci commit ua3f</span><br><span class="line">/etc/init.d/ua3f restart</span><br></pre></td></tr></table></figure>
+<h2 id="自检脚本"><a class="markdownIt-Anchor" href="#自检脚本"></a> 自检脚本</h2>
+<p>在路由器上跑，逐项确认而不是凭感觉（节选）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">NF=/proc/net/nf_conntrack</span><br><span class="line"><span class="comment"># P0: 应为 0</span></span><br><span class="line">grep -c <span class="string">&#x27;^ipv6&#x27;</span> <span class="variable">$NF</span></span><br><span class="line"><span class="comment"># P2: 应为 0（还有 OFFLOAD 说明 TTL 没真生效）</span></span><br><span class="line">grep -c -i offload <span class="variable">$NF</span></span><br><span class="line"><span class="comment"># P3: 应为 0</span></span><br><span class="line">grep -cE <span class="string">&#x27;udp .*(dport=443|sport=443)&#x27;</span> <span class="variable">$NF</span></span><br><span class="line"><span class="comment"># NTP: 客户端 123 应被本地(网关 IP)应答；src=WAN 的是路由器自身同步，正常</span></span><br><span class="line">grep <span class="string">&#x27;dport=123&#x27;</span> <span class="variable">$NF</span></span><br><span class="line"><span class="comment"># UA: 取最新一行启动日志确认伪装值</span></span><br><span class="line">grep <span class="string">&#x27;User-Agent:&#x27;</span> /var/log/ua3f/ua3f.<span class="built_in">log</span> | <span class="built_in">tail</span> -1</span><br></pre></td></tr></table></figure>
+<p>客户端侧再配一个多 UA / 多端口探测脚本（思路同经典的 <code>ua_test.sh</code>：用不同 UA、不同端口请求一个回显服务，看服务器实际收到什么），就能定位还有哪一维在漏。<strong>测的时候记得关掉客户端自己的代理软件</strong>，否则流量绕过路由器，结果不可信。</p>
+<h2 id="诚实的残留路由器侧改不掉"><a class="markdownIt-Anchor" href="#诚实的残留路由器侧改不掉"></a> 诚实的残留（路由器侧改不掉）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS/443 的 UA（在 TLS 里）、JA3/JA4</td>
+<td>不做中间人解密就改不了；现代浏览器 JA3 已随机化弱化，JA4 仍可区分</td>
+</tr>
+<tr>
+<td>IP-ID（Windows 全局递增）</td>
+<td>经代理的已统一；直连转发的要彻底解决得编 <code>kmod-rkp-ipid</code>（重编固件）</td>
+</tr>
+<tr>
+<td>TCP 时间戳 / options</td>
+<td>经代理的统一；直连泄露</td>
+</tr>
+<tr>
+<td>并发连接数 / 账号行为</td>
+<td>任何方案都藏不住&quot;一个号大量并发&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>思路是：把能收敛的都收敛掉，让单一残留维度难以单独定位到&quot;多设备&quot;。</p>
+<h2 id="性能取舍"><a class="markdownIt-Anchor" href="#性能取舍"></a> 性能取舍</h2>
+<p>关 flow offload + 几乎全部 TCP 进 ua3f，对<strong>弱硬件</strong>（入门级单核 + 64MB 内存那种）是实打实的负担：实测关 offload 瞬间单核负载就上 1.1（≈满载），高带宽 / 多设备 / 测速会明显降速、延迟抖动、偶发卡顿，内存也吃紧。</p>
+<p>可选：</p>
+<ul>
+<li><strong>接受</strong>：日常网页 / IM / 文档够用。</li>
+<li><strong>折中</strong>：P1 退回只代理少数明文 HTTP 端口，网速回升，但重新暴露非标端口明文（取舍）。</li>
+<li><strong>换硬件</strong>（双核及以上 / x86 软路由）：根本解，强烈建议——弱核跑这套本就勉强。</li>
+</ul>
+<h2 id="致谢"><a class="markdownIt-Anchor" href="#致谢"></a> 致谢</h2>
+<ul>
+<li>认证插件 fork 自 <a target="_blank" rel="noopener" href="https://github.com/lurenjiamax/luci-app-cquauth">lurenjiamax/luci-app-cquauth</a>，协议参考 <a target="_blank" rel="noopener" href="https://github.com/haowang02/cqu-net-auth">haowang02/cqu-net-auth</a></li>
+<li>UA 改写 <a target="_blank" rel="noopener" href="https://github.com/SunBK201/UA3F">SunBK201/UA3F</a>，TPROXY <a target="_blank" rel="noopener" href="https://github.com/heiher/hev-socks5-tproxy">heiher/hev-socks5-tproxy</a></li>
+<li>检测原理参考：褐瞳《校园网防止多设备检测指北》、SunBK201《某大学校园网共享上网检测机制研究》及若干博客园文章</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://LuckyEnough-Z.github.io">张嘉译</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://luckyenough-z.github.io/p/1e43e556.html">https://luckyenough-z.github.io/p/1e43e556.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://LuckyEnough-Z.github.io" target="_blank">Looking4U</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OpenWrt/">OpenWrt</a><a class="post-meta__tags" href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/">校园网</a><a class="post-meta__tags" href="/tags/%E5%A4%9A%E8%AE%BE%E5%A4%87%E6%A3%80%E6%B5%8B/">多设备检测</a><a class="post-meta__tags" href="/tags/nftables/">nftables</a><a class="post-meta__tags" href="/tags/ua3f/">ua3f</a></div><div class="post-share"><div class="social-share" data-image="/picture/one-3672.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://unpkg.com/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://unpkg.com/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/p/108f9a46.html" title="微信降级"><img class="cover" src="/picture/one-3672.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of next post" loading='lazy'><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">微信降级</div></div><div class="info-2"><div class="info-item-1"> 微信降级教程  适用于安卓 adb shell pm uninstall -k com.tencent.mmadb rebootadb install wechat.apk</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head.png" loading="eager" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">张嘉译</div><div class="author-info-description">资深菜鸟</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LuckyEnough-Z"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/LuckyEnough-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zjy1718511974@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">高强度测试中，如果觉得不错的话可以<span class="inline-tag blue">点点关注</span>或者也可以<span class="inline-tag red">分享本站</span></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text"> 背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E6%A0%B8%E5%BF%83%E8%AE%A4%E7%9F%A5"><span class="toc-number">2.</span> <span class="toc-text"> 一个核心认知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p0%E5%85%B3%E6%8E%89-ipv6%E6%9C%80%E5%85%B3%E9%94%AE"><span class="toc-number">3.</span> <span class="toc-text"> P0：关掉 IPv6（最关键）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p1%E6%8B%A6%E6%88%AA%E8%8C%83%E5%9B%B4%E4%BB%8E%E7%AB%AF%E5%8F%A3%E7%99%BD%E5%90%8D%E5%8D%95%E6%94%B9%E6%88%90%E5%87%A0%E4%B9%8E%E5%85%A8%E9%83%A8-tcp"><span class="toc-number">4.</span> <span class="toc-text"> P1：拦截范围从&quot;端口白名单&quot;改成&quot;几乎全部 TCP&quot;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p2%E7%BB%9F%E4%B8%80-ttl-%E4%BB%A5%E5%8F%8A%E9%82%A3%E4%B8%AA%E6%9C%80%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E5%9D%91"><span class="toc-number">5.</span> <span class="toc-text"> P2：统一 TTL —— 以及那个最容易踩的坑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%B8%8F-%E5%85%B3%E9%94%AE%E5%9D%91%E4%B8%8D%E5%85%B3-flow-offloadttl-%E6%94%B9%E5%86%99%E6%98%AF%E5%81%87%E7%9A%84"><span class="toc-number">5.1.</span> <span class="toc-text"> ⚠️ 关键坑：不关 flow offload，TTL 改写是假的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p3%E5%B0%81-quic"><span class="toc-number">6.</span> <span class="toc-text"> P3：封 QUIC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ntp%E8%A2%AB%E5%BF%BD%E7%95%A5%E7%9A%84%E5%BC%BA%E7%89%B9%E5%BE%81"><span class="toc-number">7.</span> <span class="toc-text"> NTP：被忽略的强特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ua%E4%BC%AA%E8%A3%85%E5%80%BC%E6%9C%AC%E8%BA%AB%E5%88%AB%E7%A9%BF%E5%B8%AE"><span class="toc-number">8.</span> <span class="toc-text"> UA：伪装值本身别穿帮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E6%A3%80%E8%84%9A%E6%9C%AC"><span class="toc-number">9.</span> <span class="toc-text"> 自检脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%9A%E5%AE%9E%E7%9A%84%E6%AE%8B%E7%95%99%E8%B7%AF%E7%94%B1%E5%99%A8%E4%BE%A7%E6%94%B9%E4%B8%8D%E6%8E%89"><span class="toc-number">10.</span> <span class="toc-text"> 诚实的残留（路由器侧改不掉）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E5%8F%96%E8%88%8D"><span class="toc-number">11.</span> <span class="toc-text"> 性能取舍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-number">12.</span> <span class="toc-text"> 致谢</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/1e43e556.html" title="重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）"/ loading='lazy'></a><div class="content"><a class="title" href="/p/1e43e556.html" title="重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）">重庆大学校园网多设备检测对抗实战（OpenWrt + ua3f）</a><time datetime="2026-05-16T12:00:00.000Z" title="发表于 2026-05-16 20:00:00">2026-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/108f9a46.html" title="微信降级"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="微信降级"/ loading='lazy'></a><div class="content"><a class="title" href="/p/108f9a46.html" title="微信降级">微信降级</a><time datetime="2025-10-07T02:16:28.000Z" title="发表于 2025-10-07 10:16:28">2025-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/1aeba13e.html" title="【Windows】终端配置代理"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="【Windows】终端配置代理"/ loading='lazy'></a><div class="content"><a class="title" href="/p/1aeba13e.html" title="【Windows】终端配置代理">【Windows】终端配置代理</a><time datetime="2025-01-02T08:57:00.000Z" title="发表于 2025-01-02 16:57:00">2025-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/f618aec.html" title="数模算法集合(一)"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="数模算法集合(一)"/ loading='lazy'></a><div class="content"><a class="title" href="/p/f618aec.html" title="数模算法集合(一)">数模算法集合(一)</a><time datetime="2022-09-06T11:19:06.000Z" title="发表于 2022-09-06 19:19:06">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/32167ff9.html" title="LaTex语法学习常用公式"><img src="/picture/one-3672.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="LaTex语法学习常用公式"/ loading='lazy'></a><div class="content"><a class="title" href="/p/32167ff9.html" title="LaTex语法学习常用公式">LaTex语法学习常用公式</a><time datetime="2022-09-05T04:31:16.000Z" title="发表于 2022-09-05 12:31:16">2022-09-05</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2026 By 张嘉译</span></div><div class="footer_custom_text"><a href="icp链接"><img class="icp-icon" src="https://blog.imashimaro.com/images/20200805012127.png" loading='lazy'><span>备案号：xxxxxx</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://unpkg.com/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script type="text/javascript" src="/js/custom.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.3/jquery-ui.min.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="/js/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://unpkg.com/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://unpkg.com/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="输入关键词检索" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/picture/one-3672.jpg" alt="/picture/one-3672.jpg"/ loading='lazy'></div><div class="blog-slider__content"><span class="blog-slider__code">2022-09-04</span><a class="blog-slider__title" href="p/4092cb80.html">常见代码案例</a><div class="blog-slider__text">常见代码案例</div><a class="blog-slider__button" href="p/4092cb80.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
