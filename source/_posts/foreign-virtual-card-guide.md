@@ -1,5 +1,6 @@
 ---
 title: 外币虚拟卡申请攻略：ChatGPT/Claude 订阅支付方案汇总
+published: false
 tags:
   - 外币卡
   - 虚拟卡
