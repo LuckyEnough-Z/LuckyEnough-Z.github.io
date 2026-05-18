@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Looking4U</title>
   
-  <subtitle>个人博客</subtitle>
+  <subtitle>编程学习笔记</subtitle>
   <link href="https://luckyenough-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://luckyenough-z.github.io/"/>

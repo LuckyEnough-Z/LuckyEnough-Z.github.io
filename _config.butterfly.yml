@@ -652,9 +652,9 @@ subtitle:
   source: 3
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - 生前何必久睡&#44;死后必会长眠
-    - 何其荣幸&#44;何德何能
-    - 所有的不平凡都来自平凡
+    - 代码改变世界&#44;学习成就未来
+    - 每一行代码都是进步的脚印
+    - Stay hungry&#44; Stay foolish
 
 
 # 如果有英文逗号' , ',使用转义字元 &#44;
@@ -680,7 +680,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: 编程学习笔记 · 持续更新中
     button:
       enable: true
       icon: fab fa-github
